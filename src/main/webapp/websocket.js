@@ -7,7 +7,7 @@ function connect() {
     var pathname = document.location.pathname;
 
     //ws = new WebSocket("ws://" +host  + pathname + "chat/" + username);
-    ws = new WebSocket("ws://localhost:8080/chat/" + username);
+    ws = new WebSocket("ws://diary-messenger.herokuapp.com/chat/" + username);
     ws.onmessage = function(event) {
         var log = document.getElementById("log");
         console.log("on message: " + event.data);
